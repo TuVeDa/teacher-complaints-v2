@@ -1,57 +1,42 @@
-<style>
-.main-container {
-  margin-left: auto;
-  margin-right: auto;
-  width: 90%;
-  text-align: center
-}
-.main-container .instructions-and-logo {
-  margin-top: 2%;
-  margin-bottom: 7%;
-  width: 100%;
-  text-align: left;
-}
-.main-container .instructions-and-logo img {
-  float: right;
-  width: 20%;
-}
-.main-container .instructions-and-logo p {
-  width: 50%;
-  font-size: 150%;
-}
-select {
-  font-size: 150%;
-  height: 4%;
-  width:100%;
-}
-textarea {
-  margin-top: 3%;
-  height: 40%;
-  width: 100%;
-  font-size: 150%;
-}
-input {
-  width: 100%;
-  height: 5%;
-  font-size: 150%;
-  margin-top: 4%;
-}
-</style>
-
-
-<div class="main-container">
-  <h1>Faculty Comment Form</h1>
-  <div class="instructions-and-logo">
-    <img src="/jefferson-houston-logo.png"/>
-
-    <p>Instructions:
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ultricies sodales nibh quis efficitur. Aliquam erat volutpat. Mauris sem dolor, lobortis sit amet tortor id, eleifend congue libero. Mauris non odio porttitor, posuere neque non, iaculis massa. Duis et interdum sapien, et iaculis lectus. Maecenas non efficitur libero. In hac habitasse platea dictumst. In tincidunt facilisis mauris, venenatis fermentum eros luctus vel. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed rhoncus, risus in dignissim commodo, lectus leo lacinia magna, id ultricies justo nisl sed est. Quisque eu condimentum sapien. Integer libero sem, rhoncus at commodo id, facilisis vitae tellus. Etiam luctus nisl id congue vulputate. Donec semper condimentum lacinia. Sed eget sem mauris. Sed id est consequat, gravida sem ac, sollicitudin urna.</p>
+<div class="main-container col-sm-10 col-sm-offset-1">
+  <div class="row" id="commentHeader">
+    <h1 class="col-sm-12">Faculty Comment Form</h1>
   </div>
-  <form>
-  <select placeholder="Select a Category">
-    <option>its an item</option>
-  </select>
-  <textarea placeholder="Please Comment Here"></textarea>
-  <input type="submit"></input>
+  <div class="row" id="commentInfo">
+    <div class="col-sm-7" id="commentText">
+      <h2> Instructions: </h2>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ultricies
+        sodales nibh quis efficitur. Aliquam erat volutpat. Mauris sem dolor, lobortis
+        sit amet tortor id, eleifend congue libero. Mauris non odio porttitor, posuere
+        neque non, iaculis massa. Duis et interdum sapien, et iaculis lectus. Maecenas
+        non efficitur libero.
+      </p>
+      <p>
+        In hac habitasse platea dictumst. In tincidunt facilisis
+        mauris, venenatis fermentum eros luctus vel. Vestibulum ante ipsum primis in
+        faucibus orci luctus et ultrices posuere cubilia Curae; Sed rhoncus, risus in
+        dignissim commodo, lectus leo lacinia magna, id ultricies justo nisl sed est.
+        Quisque eu condimentum sapien.
+      </p>
+    </div>
+    <img class="col-sm-4 col-sm-offset-1" id="commentLogo" src="/jefferson-houston-logo.png"/>
+  </div>
+
+  <form class="row" id="commentForm">
+    <div class="row" >
+      <select id="commentCategory" class="col-sm-4" placeholder="Select a Category">
+        <option>Science</option>
+        <option>English</option>
+        <option>History</option>
+        <option>Physical Education</option>
+      </select>
+    </div>
+    <div class="row" >
+      <textarea class="commentArea col-sm-12" placeholder="Please Comment Here"></textarea>
+    </div>
+    <div class="row" >
+      <button class="commentSumbit col-sm-2 col-sm-offset-10" type="submit">Submit</button>
+    </div>
   </form>
 </div>

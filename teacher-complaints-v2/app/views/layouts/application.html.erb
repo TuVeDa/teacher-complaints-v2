@@ -1,14 +1,32 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>TeacherComplaintsV2</title>
+    <title>TeacherComplaints</title>
     <%= csrf_meta_tags %>
-
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag    'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css' %>
+    <%= stylesheet_link_tag    'application' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">
+            JTAC
+          </a>
+        </div>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#">Form</a></li>
+          <li><a href="#">Admin</a></li>
+        </ul>
+      </div>
+    </nav>
+
     <%= yield %>
+
+    <footer class="footer">
+      <p>Place sticky footer content here.</p>
+    </footer>
   </body>
 </html>

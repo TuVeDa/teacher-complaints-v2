@@ -1,0 +1,50 @@
+.main-container {
+  text-align: center
+}
+
+#instructionText {
+  text-align: left;
+}
+.commentArea {
+  height: 250px;
+  margin-bottom: 1em;
+}
+.commentSumbit {
+  height: 3em;
+}
+
+#commentLogo {
+  max-width: 22em;
+  max-height: 20em;
+  width: auto;
+  height: auto;
+  padding: 0;
+}
+
+#commentHeader {
+  margin: 10px 0 10px 0;
+  h1 {
+    margin: 10px 0 10px 0;
+  }
+}
+
+#commentText {
+  padding-left: 0;
+  text-align: left;
+}
+
+#commentInfo {
+  margin: 10px 0;
+}
+
+#commentForm {
+  margin: 0 15px;
+  row {
+    margin: 0 15px;
+  }
+}
+
+#commentCategory{
+  height: 35px;
+  margin: 1em 0;
+}
