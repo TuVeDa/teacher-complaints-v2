@@ -1,0 +1,23 @@
+@import 'variables';
+
+#login-container {
+  position: absolute;
+  width: 40em;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.panel {
+  border-color: rgba(114, 11, 6, 47);
+}
+
+#loginForm {
+  width: 75%;
+  margin: 0 auto 1em auto;
+  text-align: left;
+  button {
+    text-align: center;
+  }
+}

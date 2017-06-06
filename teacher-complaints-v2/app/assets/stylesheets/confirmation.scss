@@ -1,0 +1,18 @@
+@import 'variables';
+
+#confirmation-container {
+  position: absolute;
+  width: 40em;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.confirmationRow {
+  margin-bottom: 1em;
+}
+
+#goBobcats {
+  margin-top: 2em;
+}

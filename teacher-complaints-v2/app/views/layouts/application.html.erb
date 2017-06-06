@@ -12,13 +12,15 @@
     <nav class="navbar navbar-default">
       <div class="container-fluid">
         <div class="navbar-header">
-          <a class="navbar-brand" href="#">
+          <a class="navbar-brand" href="/">
             JTAC
           </a>
         </div>
         <ul class="nav navbar-nav navbar-right">
-          <li><a href="#">Form</a></li>
-          <li><a href="#">Admin</a></li>
+          <li><a class="navLinks" href="/login">Login</a></li>
+          <li><a class="navLinks" href="/confirmation">Confirm</a></li>
+          <li><a class="navLinks"  href="/">Form</a></li>
+          <li><a class="navLinks" href="/issues">Admin</a></li>
         </ul>
       </div>
     </nav>
@@ -26,7 +28,8 @@
     <%= yield %>
 
     <footer class="footer">
-      <p>Place sticky footer content here.</p>
+      <p>Brought to you by<br/>
+      Jefferson Teacher Action Committee</p>
     </footer>
   </body>
 </html>

@@ -1,3 +1,5 @@
+@import 'variables';
+
 .main-container {
   text-align: center
 }
@@ -6,11 +8,9 @@
   text-align: left;
 }
 .commentArea {
-  height: 250px;
+  height: 225px;
   margin-bottom: 1em;
-}
-.commentSumbit {
-  height: 3em;
+  padding: 1em;
 }
 
 #commentLogo {
@@ -21,26 +21,20 @@
   padding: 0;
 }
 
-#commentHeader {
-  margin: 10px 0 10px 0;
-  h1 {
-    margin: 10px 0 10px 0;
-  }
-}
-
 #commentText {
   padding-left: 0;
   text-align: left;
 }
 
 #commentInfo {
-  margin: 10px 0;
+  margin: 1em 0;
 }
 
 #commentForm {
-  margin: 0 15px;
+  margin: 0 1em;
+  margin-bottom: 1em;
   row {
-    margin: 0 15px;
+    margin: 0 1em;
   }
 }
 

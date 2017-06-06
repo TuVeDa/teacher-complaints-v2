@@ -1,0 +1,39 @@
+@import 'variables';
+
+.navbar {
+  background-color: $maroon;
+  a {
+    color: $gold !important;
+    &:hover {
+      color: white !important;
+    }
+
+    &:active {
+      color: darkgrey !important;
+    }
+  }
+}
+
+.navbar-brand {
+  font-size: $font-size-navbarBrand;
+}
+
+.navLinks {
+  font-size: $font-size-navbarLinks;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 70px;
+  background-color: $maroon;
+  p {
+    text-align: center;
+    line-height: 16px;
+    padding-bottom: 0;
+    margin: 1.5em 0 0 0;
+    font-size: $font-size-footer;
+    color: $gold;
+  }
+}

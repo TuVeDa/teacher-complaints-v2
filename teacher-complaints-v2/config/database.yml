@@ -24,6 +24,7 @@ default: &default
 development:
   <<: *default
   database: teacher-complaints-v2_development
+  password: postgres
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
@@ -58,6 +59,8 @@ development:
 test:
   <<: *default
   database: teacher-complaints-v2_test
+  password: postgres
+
 
 # As with config/secrets.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
@@ -82,4 +85,4 @@ production:
   <<: *default
   database: teacher-complaints-v2_production
   username: teacher-complaints-v2
-  password: <%= ENV['TEACHER-COMPLAINTS-V2_DATABASE_PASSWORD'] %>
+  password: postgres
