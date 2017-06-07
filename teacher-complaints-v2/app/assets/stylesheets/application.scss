@@ -1,0 +1,59 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+@import 'comment';
+@import 'issues';
+@import 'nav_footer';
+@import 'login';
+@import 'variables';
+@import 'confirmation';
+
+.h1 {
+  font-size: $font-size-h1;
+  color: $maroon;
+  font-weight: bold;
+}
+
+.h2-gold {
+  font-size: $font-size-h2;
+  color: $gold;
+  font-weight: bold;
+}
+
+.h2-maroon {
+  font-size: $font-size-h2;
+  color: $maroon;
+  font-weight: bold;
+}
+
+.sumbitButton {
+  height: 3em;
+  width: 10.5em;
+  border-radius: 1em;
+  background-color: $gold;
+  border: none;
+  color: $maroon;
+  font-weight: bold;
+  float: right;
+  &:hover {
+    color: white;
+    background-color: darkgrey;
+  }
+  &:active {
+    color: $gold;
+    background-color: $maroon;
+  }
+}
