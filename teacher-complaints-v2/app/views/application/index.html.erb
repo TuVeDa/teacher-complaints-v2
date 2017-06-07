@@ -23,20 +23,16 @@
     <img class="col-sm-4 col-sm-offset-1" id="commentLogo" src="/jefferson-houston-logo.png"/>
   </div>
 
-  <form class="row" id="commentForm" method="Post" action="/issues">
+  <%= form_for(@issue), url: issues_path, method: "POST", html: {class: "row" id: "commentForm"} do |f| %>
     <div class="row" >
-      <select id="commentCategory" class="col-sm-4" placeholder="Select a Category" name="category">
-        <option>Science</option>
-        <option>English</option>
-        <option>History</option>
-        <option>Physical Education</option>
-      </select>
+      <%= f.select :category, options_for_select(["Science", "English", "History", "Physical Education"]), {}, {:class => 'col-sm-4', :id => "commentCategory", :placeholder =>"Select a Category"} %>
+      <% end %>
     </div>
     <div class="row" >
-      <textarea class="col-sm-12 commentArea" name="note" placeholder="Please Comment Here..."></textarea>
+      <%= f.textarea :note, {:class =>"col-sm-12 commentArea", :placeholder => "Please Comment Here..."} %>
     </div>
     <div class="row" >
-      <button class="sumbitButton" type="submit">SUBMIT</button>
+      <%= f.submit "SUBMIT", class: "submitButton" %>
     </div>
-  </form>
+  <% end %>
 </div>
