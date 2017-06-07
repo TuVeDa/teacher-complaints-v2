@@ -27,7 +27,7 @@
       <%= f.select :category, options_for_select(["Science", "English", "History", "Physical Education"]), {}, {:class => 'col-sm-4', :id => "commentCategory", :placeholder =>"Select a Category"} %>
     </div>
     <div class="row" >
-      <%= f.textarea :note, {:class =>"col-sm-12 commentArea", :placeholder => "Please Comment Here..."} %>
+      <%= f.text_area :note, {:class =>"col-sm-12 commentArea", :placeholder => "Please Comment Here..."} %>
     </div>
     <div class="row" >
       <%= f.submit "SUBMIT", class: "submitButton" %>
