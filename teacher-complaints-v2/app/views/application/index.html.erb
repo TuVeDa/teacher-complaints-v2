@@ -23,10 +23,9 @@
     <img class="col-sm-4 col-sm-offset-1" id="commentLogo" src="/jefferson-houston-logo.png"/>
   </div>
   <% @issue = Issue.new %>
-  <%= form_for @issue, url: issues_path, method: "POST", html: {class: "row" id: "commentForm"} do |f| %>
+  <%= form_for @issue, url: issues_path, method: "POST", html: {class: "row", id: "commentForm"} do |f| %>
     <div class="row" >
       <%= f.select :category, options_for_select(["Science", "English", "History", "Physical Education"]), {}, {:class => 'col-sm-4', :id => "commentCategory", :placeholder =>"Select a Category"} %>
-      <% end %>
     </div>
     <div class="row" >
       <%= f.textarea :note, {:class =>"col-sm-12 commentArea", :placeholder => "Please Comment Here..."} %>
