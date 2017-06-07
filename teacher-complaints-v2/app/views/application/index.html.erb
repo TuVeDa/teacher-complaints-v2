@@ -23,9 +23,9 @@
     <img class="col-sm-4 col-sm-offset-1" id="commentLogo" src="/jefferson-houston-logo.png"/>
   </div>
 
-  <form class="row" id="commentForm">
+  <form class="row" id="commentForm" method="Post" action="/issues">
     <div class="row" >
-      <select id="commentCategory" class="col-sm-4" placeholder="Select a Category">
+      <select id="commentCategory" class="col-sm-4" placeholder="Select a Category" name="category">
         <option>Science</option>
         <option>English</option>
         <option>History</option>
@@ -33,7 +33,7 @@
       </select>
     </div>
     <div class="row" >
-      <textarea class="col-sm-12 commentArea" placeholder="Please Comment Here..."></textarea>
+      <textarea class="col-sm-12 commentArea" name="note" placeholder="Please Comment Here..."></textarea>
     </div>
     <div class="row" >
       <button class="sumbitButton" type="submit">SUBMIT</button>
