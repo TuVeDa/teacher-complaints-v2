@@ -19,6 +19,9 @@
         <ul class="nav navbar-nav navbar-right">
           <li><a class="navLinks"  href="/">Form</a></li>
           <li><a class="navLinks" href="/issues">Admin</a></li>
+          <% if session[:jhs_user] %>
+            <li><a class="navLinks" href="/logout">Logout</a></li>
+          <% end %>
         </ul>
       </div>
     </nav>
