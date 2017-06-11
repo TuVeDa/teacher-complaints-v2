@@ -1,5 +1,5 @@
 class IssuesController < ApplicationController
-  before_action :logged_in?
+  before_action :logged_in?, except: [:create]
   before_action :set_issue, only: [:show, :edit, :update, :destroy]
 
   # GET /issues
