@@ -5,26 +5,35 @@
   <div class="row" id="commentInfo">
     <div class="col-sm-7" id="commentText">
       <h2 class="h2-gold"> Instructions: </h2>
+      <p>Good afternoon Jefferson-Houston Staff! </p>
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ultricies
-        sodales nibh quis efficitur. Aliquam erat volutpat. Mauris sem dolor, lobortis
-        sit amet tortor id, eleifend congue libero. Mauris non odio porttitor, posuere
-        neque non, iaculis massa. Duis et interdum sapien, et iaculis lectus. Maecenas
-        non efficitur libero.
+        Please leave a comment for the Faculty Advisory Council below. Select a category, type your comment,
+        and press submit. The FAC will do its best to hear all of your ideas,
+        suggestions, and improvements.
       </p>
       <p>
-        In hac habitasse platea dictumst. In tincidunt facilisis
-        mauris, venenatis fermentum eros luctus vel. Vestibulum ante ipsum primis in
-        faucibus orci luctus et ultrices posuere cubilia Curae; Sed rhoncus, risus in
-        dignissim commodo, lectus leo lacinia magna, id ultricies justo nisl sed est.
-        Quisque eu condimentum sapien.
+        Thank you for your input!
       </p>
     </div>
     <img class="col-sm-4 col-sm-offset-1" id="commentLogo" src="/jefferson-houston-logo.png"/>
   </div>
   <%= form_for @issue, url: issues_path, method: "POST", html: {class: "row", id: "commentForm"} do |f| %>
     <div class="row" >
-      <%= f.select :category, options_for_select(["Science", "English", "History", "Physical Education"]), {}, {:class => 'col-sm-4', :id => "commentCategory", :placeholder =>"Select a Category"} %>
+      <%= f.select :category, options_for_select([
+          "Logistics",
+          "Inter-Staff Relationships",
+          "Student-to-student Relationships",
+          "Safety",
+          "Communication",
+          "General School Improvement",
+          "Individual Student Needs",
+          "Miscellaneous"]),
+        {}, {:class => 'col-sm-4', :id => "commentCategory", :placeholder => "Select a Category"} %>
+      <div class="checkbox col-sm-offset-5 col-sm-3">
+        <label class="big-checkbox">
+          <input type="checkbox"> Would you like to talk about this in person?
+        </label>
+      </div>
     </div>
     <div class="row" >
       <%= f.text_area :note, {:class =>"col-sm-12 commentArea", :placeholder => "Please Comment Here..."} %>

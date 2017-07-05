@@ -1,14 +1,13 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Category:</strong>
+<div class="showBody">
+  <span>Category:</span>
   <%= @issue.category %>
-</p>
 
-<p>
-  <strong>Note:</strong>
-  <%= @issue.note %>
-</p>
+  <h2 class="h2-gold">Note:</h2>
+  <p>
+    <%= @issue.note %>
+  </p>
 
-<%= link_to 'Edit', edit_issue_path(@issue) %> |
-<%= link_to 'Back', issues_path %>
+  <div class="back"><%= link_to 'Back', issues_path %></div>
+</div>

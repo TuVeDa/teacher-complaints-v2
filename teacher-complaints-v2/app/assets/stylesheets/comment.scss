@@ -42,3 +42,11 @@
   height: 35px;
   margin: 1em 0;
 }
+
+.checkbox {
+  padding-top: 1.5em;
+  .big-checkbox > input {
+    height: 1em;
+    transform: scale(1.5);
+  }
+}

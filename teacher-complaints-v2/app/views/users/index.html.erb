@@ -1,22 +1,27 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Users</h1>
+<div class="row">
+  <h1 class="h1 title">Users</h1>
+</div>
 
 <table>
-  <thead>
+  <thead class="tableHeader">
     <tr>
-      <th>Name</th>
-      <th colspan="3"></th>
+      <th class="columnHeader">Name</th>
+      <th class="columnHeader">Actions</th>
     </tr>
   </thead>
 
   <tbody>
     <% @users.each do |user| %>
-      <tr>
-        <td><%= user.name %></td>
-        <td><%= link_to 'Show', user %></td>
-        <td><%= link_to 'Edit', edit_user_path(user) %></td>
-        <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      <tr class="tableRow">
+        <td class="bodyCell categoryName"><%= user.name %></td>
+        <td class="bodyCell2">
+          <%= link_to 'Show', user, :class => "tableAction" %>
+          <%= link_to 'Edit', edit_user_path(user), :class => "tableAction" %>
+          <%= link_to 'Destroy', user, method: :delete,
+          data: { confirm: 'Are you sure?' }, :class => "tableAction destroy" %>
+        </td>
       </tr>
     <% end %>
   </tbody>
@@ -24,4 +29,6 @@
 
 <br>
 
-<%= link_to 'New User', new_user_path %>
+<div class="newUser">
+  <%= link_to 'Add New User', new_user_path %>
+</div>

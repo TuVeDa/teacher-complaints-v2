@@ -1,0 +1,73 @@
+@import 'variables';
+
+
+.title {
+  text-align: center
+}
+
+table {
+  width: 75%;
+  margin: 3em auto;
+}
+
+.tableHeader {
+  background-color: $gold;
+  color: $maroon;
+}
+
+.columnHeader {
+  padding: 1em 1em;
+  border: grey;
+  text-align: center;
+  border-right: 1px solid #A9A9A9;
+}
+
+.columnHeader:last-child {
+  border-right: none;
+}
+
+.tableRow {
+  padding: 1em 0;
+}
+
+.tableRow:nth-child(even){
+  background-color: #E0E0E0;
+}
+
+.bodyCell {
+  padding: 1em 1em;
+  border-right: 1px solid #A9A9A9;
+  &.categoryName {
+    font-weight: bold;
+  }
+}
+
+.bodyCell:last-child {
+  border-right: none;
+}
+
+.bodyCell2 {
+  padding: 1em 1em;
+  text-align: center;
+  &.categoryName {
+    font-weight: bold;
+  }
+}
+
+.tableAction {
+  margin: 0 .5em;
+  &.destroy {
+    color: red;
+    &:hover {
+      color: red;
+    }
+  }
+}
+
+.newUser {
+  font-weight: bold;
+  text-align: center;
+  a {
+    color: $maroon;
+  }
+}
