@@ -21,7 +21,7 @@ class ApplicationController < ActionController::Base
       Rails.logger.info user
       # logic stuff
       session[:jhs_user] = user.name
-      redirect_to root_url
+      redirect_to issues_url
     else
       flash[:notice] = "FAILED password/user"
       redirect_to login_url
