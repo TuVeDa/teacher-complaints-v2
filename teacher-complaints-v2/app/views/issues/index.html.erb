@@ -9,6 +9,7 @@
     <tr>
       <th class="columnHeader">Category</th>
       <th class="columnHeader">Note</th>
+      <th class="columnHeader">Wants to talk in person</th>
       <th class="columnHeader">Actions</th>
     </tr>
   </thead>
@@ -18,6 +19,7 @@
       <tr class="tableRow">
         <td class="bodyCell categoryName"><%= issue.category %></td>
         <td class="bodyCell"><%= issue.note %></td>
+        <td class="bodyCell"><%= issue.contact %></td>
         <td class="bodyCell">
           <%= link_to 'Show', issue %>
           <%= link_to 'Destroy', issue, method: :delete,
