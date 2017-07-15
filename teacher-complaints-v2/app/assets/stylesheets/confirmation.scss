@@ -2,7 +2,7 @@
 
 #confirmation-container {
   position: absolute;
-  width: 40em;
+  width: 100%;
   top: 45%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -11,6 +11,8 @@
 
 .confirmationRow {
   margin-bottom: 1em;
+  font-size: 2em;
+
 }
 
 #goBobcats {
