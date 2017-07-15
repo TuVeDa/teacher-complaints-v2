@@ -9,7 +9,7 @@
 }
 .commentArea {
   height: 225px;
-  margin-bottom: 1em;
+  margin-bottom: .5em;
   padding: 1em;
 }
 
@@ -43,10 +43,16 @@
   margin: 1em 0;
 }
 
-.checkbox {
+.description {
   padding-top: 1.5em;
+}
+
+.checkbox {
+  float: left;
+  padding-left: 1em;
   .big-checkbox > input {
     height: 1em;
     transform: scale(1.5);
+
   }
 }

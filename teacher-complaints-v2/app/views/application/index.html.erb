@@ -29,16 +29,19 @@
           "Individual Student Needs",
           "Miscellaneous"]),
         {}, {:class => 'col-sm-4', :id => "commentCategory", :placeholder => "Select a Category"} %>
-      <div class="checkbox col-sm-offset-5 col-sm-3">
-        <label class="big-checkbox">
-          <input type="checkbox"> Would you like to talk about this in person?
-        </label>
+      <div class="description col-sm-offset-3 col-sm-5">
+        Help with two or more students to improve their relationship?
       </div>
     </div>
     <div class="row" >
       <%= f.text_area :note, {:class =>"col-sm-12 commentArea", :placeholder => "Please Comment Here..."} %>
     </div>
-    <div class="row" >
+    <div class="row">
+      <div class="checkbox">
+        <label class="big-checkbox">
+          <input type="checkbox"> Would you like to talk about this in person?
+        </label>
+      </div>
       <%= f.submit "SUBMIT", class: "submitButton" %>
     </div>
   <% end %>
