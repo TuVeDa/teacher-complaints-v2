@@ -6,6 +6,25 @@
 @import 'confirmation';
 @import 'table';
 
+html {
+  // display: flex;
+  // min-height: 100vh;
+  // flex-direction: column;
+}
+
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  background-color: #fff;
+  color: #333;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.content {
+  flex: 1;
+}
+
 .h1 {
   font-size: $font-size-h1;
   color: $maroon;
