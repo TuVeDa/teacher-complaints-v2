@@ -19,15 +19,7 @@
   </div>
   <%= form_for @issue, url: issues_path, method: "POST", html: {class: "row", id: "commentForm"} do |f| %>
     <div class="row" >
-      <%= f.select :category, options_for_select([
-          "Logistics",
-          "Inter-Staff Relationships",
-          "Student-to-student Relationships",
-          "Safety",
-          "Communication",
-          "General School Improvement",
-          "Individual Student Needs",
-          "Miscellaneous"]),
+      <%= f.select :category_id, Category.all,
         {}, {:class => 'col-xs-12 col-sm-4', :id => "commentCategory", :placeholder => "Select a Category"} %>
       <div class="description ">
         Help with two or more students to improve their relationship?

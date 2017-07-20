@@ -2,6 +2,7 @@ class IssuesController < ApplicationController
   before_action :logged_in?, except: [:create]
   before_action :set_issue, only: [:show, :edit, :update, :destroy]
 
+
   # GET /issues
   # GET /issues.json
   def index
@@ -70,6 +71,6 @@ class IssuesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def issue_params
-      params.require(:issue).permit(:category, :note, :contact)
+      params.require(:issue).permit(:category, :note, :contact, :category_id)
     end
 end
