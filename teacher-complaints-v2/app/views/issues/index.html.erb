@@ -21,7 +21,7 @@
         <td class="bodyCell"><%= issue.note %></td>
         <td class="bodyCell"><%= issue.contact %></td>
         <td class="bodyCell">
-          <%= link_to 'Show', issue %>
+          <%= link_to 'Show', issue, :class => "tableAction" %>
           <%= link_to 'Destroy', issue, method: :delete,
           data: { confirm: 'Are you sure?'}, :class => "tableAction destroy" %>
         </td>
