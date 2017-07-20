@@ -1,11 +1,7 @@
 @import 'variables';
 
 #confirmation-container {
-  position: absolute;
-  width: 100%;
-  top: 45%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  padding-top: 4em;
   text-align: center;
 }
 
@@ -17,4 +13,12 @@
 
 #goBobcats {
   margin-top: 2em;
+}
+
+#confimationLogo {
+  max-width: 22em;
+  max-height: 20em;
+  width: auto;
+  height: auto;
+  padding: 0;
 }
