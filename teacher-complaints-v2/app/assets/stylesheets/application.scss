@@ -67,8 +67,6 @@ body {
 }
 
 .showBody {
-  padding-left: 3em;
-  padding-top: 3em;
   span {
     font-weight: bold;
     color: $maroon;
@@ -80,6 +78,11 @@ body {
 
   .back {
     padding-top: 3em;
+    font-weight: bold;
+    text-align: center;
+    a {
+      color: $maroon;
+    }
   }
 
 }
