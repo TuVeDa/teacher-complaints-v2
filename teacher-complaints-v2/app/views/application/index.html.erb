@@ -19,7 +19,7 @@
   </div>
   <%= form_for @issue, url: issues_path, method: "POST", html: {class: "row", id: "commentForm"} do |f| %>
     <div class="row" >
-      <%= f.select :category_id, Category.all,
+      <%= f.collection_select(:category_id, Category.all, :id, :name,
         {}, {:class => 'col-xs-12 col-sm-4', :id => "commentCategory", :placeholder => "Select a Category"} %>
       <div class="description ">
         Help with two or more students to improve their relationship?
