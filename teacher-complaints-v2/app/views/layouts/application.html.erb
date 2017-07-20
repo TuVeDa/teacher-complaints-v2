@@ -5,32 +5,45 @@
     <%= csrf_meta_tags %>
     <%= stylesheet_link_tag    'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css' %>
     <%= stylesheet_link_tag    'application' %>
+
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
+  <body class="body">
     <nav class="navbar navbar-default">
       <div class="container-fluid">
         <div class="navbar-header">
-          <a class="navbar-brand" href="/">
-            FAC
-          </a>
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-1snly"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/">FAC</a>
         </div>
-        <ul class="nav navbar-nav navbar-right">
-          <li><a class="navLinks"  href="/">Form</a></li>
-          <li><a class="navLinks" href="/issues">Admin</a></li>
-          <% if session[:jhs_user] %>
-            <li><a class="navLinks" href="/logout">Logout</a></li>
-          <% end %>
-        </ul>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a class="navLinks"  href="/">Form</a></li>
+            <li><a class="navLinks" href="/issues">Admin</a></li>
+            <% if session[:jhs_user] %>
+              <li><a class="navLinks" href="/logout">Logout</a></li>
+            <% end %>
+          </ul>
+        </div>
       </div>
     </nav>
 
-    <%= yield %>
+    <div class="container-fluid content">
+      <%= yield %>
+    </div>
 
     <footer class="footer">
-      <p>Brought to you by<br/>
-      Faculty Advisory Council</p>
+      <div class="container-fluid">
+        <p>Brought to you by<br/>
+        Faculty Advisory Council</p>
+      </div>
     </footer>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
   </body>
 </html>
