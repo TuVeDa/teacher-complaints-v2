@@ -49,6 +49,7 @@ body {
   color: $maroon;
   font-weight: bold;
   float: right;
+  margin-top: .25em;
   &:hover {
     color: white;
     background-color: darkgrey;
@@ -56,6 +57,12 @@ body {
   &:active {
     color: $gold;
     background-color: $maroon;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .submitButton {
+    float: none;
   }
 }
 
