@@ -39,6 +39,7 @@
 </div>
 <script>
   $("select").on("change", function(e){
-    console.log($("select option:selected").attr("data_description"));
+    let description = $("select option:selected").attr("data_description");
+    $(".description").html(description);
   });
 </script>
