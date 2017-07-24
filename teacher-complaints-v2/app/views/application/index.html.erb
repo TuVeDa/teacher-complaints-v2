@@ -19,7 +19,7 @@
   </div>
   <%= form_for @issue, url: issues_path, method: "POST", html: {class: "row", id: "commentForm"} do |f| %>
     <div class="row" >
-      <%= f.select :category_id, options_for_select(Category.all.order("created_at asc")(sort_by: created_at).map{ |c| [c.name, c.id, {'data_description'=>c.description}] }), {}, {:class => 'col-xs-12 col-sm-4', :id => "commentCategory", :placeholder => "Select a Category"} %>
+      <%= f.select :category_id, options_for_select(Category.all.order("created_at asc").map{ |c| [c.name, c.id, {'data_description'=>c.description}] }), {}, {:class => 'col-xs-12 col-sm-4', :id => "commentCategory", :placeholder => "Select a Category"} %>
       <div class="description ">
         <%= Category.first.description %>
       </div>
