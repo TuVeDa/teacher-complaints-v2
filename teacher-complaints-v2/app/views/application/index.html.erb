@@ -21,7 +21,7 @@
     <div class="row" >
       <%= f.select :category_id, options_for_select(Category.all.map{ |c| [c.name, c.id, {'data_description'=>c.description}] }), {}, {:class => 'col-xs-12 col-sm-4', :id => "commentCategory", :placeholder => "Select a Category"} %>
       <div class="description ">
-        Help with two or more students to improve their relationship?
+        <%= Category.first.description %>
       </div>
     </div>
     <div class="row" >
