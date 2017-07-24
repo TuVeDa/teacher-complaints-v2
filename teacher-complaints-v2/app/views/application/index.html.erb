@@ -1,10 +1,4 @@
 <div class="main-container col-lg-10 col-lg-offset-1">
-  <script>
-    $("select").on("change", function(el){
-      console.log($(this));
-      console.log(el.attr('data-description'));
-    });
-  </script>
   <div class="row">
     <h1 class="col-xs-12 h1">Faculty Comment Form</h1>
   </div>
@@ -43,3 +37,10 @@
     </div>
   <% end %>
 </div>
+<script>
+  $("select").on("change", function(el){
+    console.log("javascript working");
+    console.log($(this));
+    console.log(el.attr('data-description'));
+  });
+</script>
