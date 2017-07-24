@@ -1,4 +1,7 @@
 <div class="main-container col-lg-10 col-lg-offset-1">
+  <script>
+    $("select")
+  </script>
   <div class="row">
     <h1 class="col-xs-12 h1">Faculty Comment Form</h1>
   </div>
@@ -19,7 +22,7 @@
   </div>
   <%= form_for @issue, url: issues_path, method: "POST", html: {class: "row", id: "commentForm"} do |f| %>
     <div class="row" >
-      <%= f.collection_select(:category_id, Category.all, :id, :name,{}, {:class => 'col-xs-12 col-sm-4', :id => "commentCategory", :placeholder => "Select a Category"}) %>
+      <%= f.collection_select(:category_id, Category.all, :id, :name,{}, {:class => 'col-xs-12 col-sm-4', :id => "commentCategory", :placeholder => "Select a Category", :data_description => :description}) %>
       <div class="description ">
         Help with two or more students to improve their relationship?
       </div>
