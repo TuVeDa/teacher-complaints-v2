@@ -17,7 +17,7 @@
   <tbody>
     <% @issues.each do |issue| %>
       <tr class="tableRow">
-        <td class="bodyCell categoryName"><%= issue.category %></td>
+        <td class="bodyCell categoryName"><%= issue.category.name %></td>
         <td class="bodyCell"><%= issue.note %></td>
         <td class="bodyCell"><%= issue.contact %></td>
         <td class="bodyCell">
