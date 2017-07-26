@@ -6,7 +6,7 @@ class IssuesController < ApplicationController
   # GET /issues
   # GET /issues.json
   def index
-    if params[:category_id] == "all" || params[:category_id].blank? ? Issue.all : Issue.where(category_id: params[:category_id])
+    @issues = params[:category_id] == "all" || params[:category_id].blank? ? Issue.all : Issue.where(category_id: params[:category_id])
     @categories = Category.all
   end
 
