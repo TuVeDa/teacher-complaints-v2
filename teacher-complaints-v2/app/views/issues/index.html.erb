@@ -5,6 +5,14 @@
 </div>
 
 <table>
+  <div class="row select">
+    <select class="col-xs-12 col-sm-4">
+      <option value="all">All Categories</option>
+      <% @categories.each do |cat| %>
+        <option value=<%= cat.id %> <%= @category && @category.id == cat.id ? "selected" : "" %> ><%= cat.name %></option>
+      <% end %>
+    </select>
+  </div>
   <thead class="tableHeader">
     <tr>
       <th class="columnHeader">Category</th>
@@ -17,7 +25,7 @@
   <tbody>
     <% @issues.each do |issue| %>
       <tr class="tableRow">
-        <td class="bodyCell categoryName"><%= issue.category %></td>
+        <td class="bodyCell categoryName"><%= issue.category.name %></td>
         <td class="bodyCell"><%= issue.note %></td>
         <td class="bodyCell"><%= issue.contact %></td>
         <td class="bodyCell actionCell">
@@ -29,3 +37,12 @@
     <% end %>
   </tbody>
 </table>
+
+<script>
+  $("select").on("change", function(){
+    let categoryId = $("select option:selected").val();
+    let queryString = "?category=" + categoryId;
+    let url =[location.protocol, '//', location.host, location.pathname, queryString].join('');
+    window.location.replace(url);
+  });
+</script>

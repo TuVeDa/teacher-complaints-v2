@@ -28,18 +28,9 @@
   </div>
   <%= form_for @issue, url: issues_path, method: "POST", html: {class: "row", id: "commentForm"} do |f| %>
     <div class="row" >
-      <%= f.select :category, options_for_select([
-          "Logistics",
-          "Inter-Staff Relationships",
-          "Student-to-student Relationships",
-          "Safety",
-          "Communication",
-          "General School Improvement",
-          "Individual Student Needs",
-          "Miscellaneous"]),
-        {}, {:class => 'col-xs-12 col-sm-4', :id => "commentCategory", :placeholder => "Select a Category"} %>
+      <%= f.select :category_id, options_for_select(Category.all.order("created_at asc").map{ |c| [c.name, c.id, {'data_description'=>c.description}] }), {}, {:class => 'col-xs-12 col-sm-4', :id => "commentCategory", :placeholder => "Select a Category"} %>
       <div class="description ">
-        Help with two or more students to improve their relationship?
+        <%= Category.first.description %>
       </div>
     </div>
     <div class="row" >
@@ -48,10 +39,16 @@
     <div class="row">
       <div class="checkbox">
         <label class="big-checkbox">
-          <input type="checkbox"> Would you like to talk about this in person?
+          <%= f.check_box :contact %> Would you like to talk about this in person?
         </label>
       </div>
       <%= f.submit "SUBMIT", class: "submitButton" %>
     </div>
   <% end %>
 </div>
+<script>
+  $("select").on("change", function(e){
+    let description = $("select option:selected").attr("data_description");
+    $(".description").html(description);
+  });
+</script>
