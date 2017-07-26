@@ -26,6 +26,7 @@
   padding-left: 0;
   text-align: left;
   float: left;
+  font-size: $font-size-paragraph;
 }
 
 #commentInfo {
@@ -35,12 +36,15 @@
 #commentForm {
   margin: 0 1em;
   margin-bottom: 1em;
-  
 }
 
 #commentCategory{
   height: 35px;
   margin: 1em 0;
+}
+
+#thx-input {
+  margin-bottom: 0;
 }
 
 .description {
@@ -79,4 +83,10 @@
   .checkbox {
     float: none;
   }
+}
+
+.form-title {
+  color: $gold;
+  font-size:$font-size-title;
+  font-weight: $font-weight-title;
 }
