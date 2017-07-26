@@ -6,7 +6,8 @@ class IssuesController < ApplicationController
   # GET /issues
   # GET /issues.json
   def index
-    @issues = Issue.all
+    @issues = params[:category_id] ? Issue.where(category_id: params[:category_id]) : Issue.all
+    @categories = Category.all
   end
 
   # GET /issues/1
