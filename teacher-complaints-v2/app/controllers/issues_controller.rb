@@ -8,7 +8,6 @@ class IssuesController < ApplicationController
   def index
     if params[:category] == "all" || params[:category].blank?
       @issues = Issue.all
-      @category = Category.first
     else
       @issues = Issue.where(category_id: params[:category])
       @category = Category.find(params[:category])
