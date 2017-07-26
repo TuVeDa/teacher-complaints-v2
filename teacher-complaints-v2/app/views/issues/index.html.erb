@@ -42,7 +42,7 @@
 <script>
   $("select").on("change", function(){
     let categoryId = $("select option:selected").val();
-    let queryString = "?category_id=" + categoryId;
+    let queryString = "?category=" + categoryId;
     let url =[location.protocol, '//', location.host, location.pathname, queryString].join('');
     window.location.replace(url);
   });
