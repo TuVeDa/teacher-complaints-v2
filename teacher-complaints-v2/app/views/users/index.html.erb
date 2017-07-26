@@ -16,7 +16,7 @@
     <% @users.each do |user| %>
       <tr class="tableRow">
         <td class="bodyCell categoryName"><%= user.name %></td>
-        <td class="bodyCell2 tableAction">
+        <td class="bodyCell2">
           <%= link_to 'Show', user, :class => "tableAction" %><br />
           <%= link_to 'Edit', edit_user_path(user), :class => "tableAction" %><br />
           <%= link_to 'Destroy', user, method: :delete,
