@@ -6,10 +6,10 @@
 
 <div class="row">
   <select>
-    <% @categories.each do |cat| %>
-    <option value=<%= cat.id %> > <%= cat.name %></option>
-    <% end %>
     <option value="all">All Categories</option>
+    <% @categories.each do |cat| %>
+      <option value=<%= cat.id %> <%= @category && @category.id == cat.id ? "selected" : "" %> ><%= cat.name %></option>
+    <% end %>
   </select>
 </div>
 
