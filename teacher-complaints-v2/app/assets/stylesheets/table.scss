@@ -59,6 +59,10 @@ table {
   }
 }
 
+.actionCell {
+  text-align: center;
+}
+
 .tableAction {
   margin: 0 1em;
   &.destroy {
