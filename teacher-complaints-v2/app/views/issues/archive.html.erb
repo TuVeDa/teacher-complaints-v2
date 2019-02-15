@@ -1,0 +1,48 @@
+<p id="notice"><%= notice %></p>
+
+<div class="row">
+  <h1 class="h1 title">Issues</h1>
+</div>
+
+<table>
+  <div class="row select">
+    <select class="col-xs-12 col-sm-4">
+      <option value="all">All Categories</option>
+      <% @categories.each do |cat| %>
+        <option value=<%= cat.id %> <%= @category && @category.id == cat.id ? "selected" : "" %> ><%= cat.name %></option>
+      <% end %>
+    </select>
+  </div>
+  <thead class="tableHeader">
+    <tr>
+      <th class="columnHeader">Category</th>
+      <th class="columnHeader">Note</th>
+      <th class="columnHeader">Wants to talk in person</th>
+      <th class="columnHeader">Actions</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @issues.each do |issue| %>
+      <tr class="tableRow">
+        <td class="bodyCell categoryName"><%= issue.category.name %></td>
+        <td class="bodyCell"><%= issue.note %></td>
+        <td class="bodyCell"><%= issue.contact %></td>
+        <td class="bodyCell actionCell">
+          <%= link_to 'Show', issue, :class => "tableAction" %>
+          <%= link_to 'Destroy', issue, method: :delete,
+          data: { confirm: 'Are you sure?'}, :class => "tableAction destroy" %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<script>
+  $("select").on("change", function(){
+    let categoryId = $("select option:selected").val();
+    let queryString = "?category=" + categoryId;
+    let url =[location.protocol, '//', location.host, location.pathname, queryString].join('');
+    window.location.replace(url);
+  });
+</script>
