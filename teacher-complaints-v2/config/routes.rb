@@ -6,5 +6,6 @@ Rails.application.routes.draw do
   get '/login' => "application#login", as: "login"
   get '/logout' => "application#logout", as: "logout"
   post '/authenticate' => "application#authenticate", as: "authenticate"
+  get '/archive' => "issues#archive", as: "archive"
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
