@@ -19,6 +19,10 @@ class IssuesController < ApplicationController
   # GET /issues/1.json
   def show
   end
+  
+  def archive
+    @issues = Issue.only_deleted
+  end
 
   # GET /issues/new
   def new
