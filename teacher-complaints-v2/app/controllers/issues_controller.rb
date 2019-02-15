@@ -21,7 +21,13 @@ class IssuesController < ApplicationController
   end
   
   def archive
-    @issues = Issue.only_deleted
+    if params[:category] == "all" || params[:category].blank?
+      @issues = Issue.only_deleted
+    else
+      @issues = Issue.only_deleted.where(category_id: params[:category])
+      @category = Category.find(params[:category])
+    end
+    @categories = Category.all
   end
 
   # GET /issues/new
